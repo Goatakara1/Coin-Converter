@@ -23,11 +23,11 @@ public class CryptoConverter {
 
         switch (coin) {
             case 1:
-                result = 64324.81 / dollar;
+                result = getResult(dollar,64324.81);
                 break;
 
             case 2:
-                result = 3301.17 / dollar;
+                result = getResult(dollar,3301.17);
                 break;
 
             case 3:
@@ -53,5 +53,13 @@ public class CryptoConverter {
 
         System.out.println("You have " + result + " of selected cryptocurrency.");
     }
+
+    private static double getResult(double dollar, double coinValue) {
+        double result;
+        result = coinValue / dollar;
+        return result;
+    }
+
+
 }
 
